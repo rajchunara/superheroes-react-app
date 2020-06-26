@@ -1,0 +1,13 @@
+.superheroContainer {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 80%;
+  grid-gap: 30px;
+}

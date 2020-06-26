@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import HomeComponent from "./components/Home/HomeComponent";
+import { connect } from "react-redux";
+import { fetchNSuperHeroes } from "./redux/superheroes/superheroesAction";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchNSuperHeroes(20));
+  }, [dispatch]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <HomeComponent />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    superHero: state.superhero,
+  };
+};
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     fetchNSuperHeroes: (n) => dispatch(fetchNSuperHeroes(n)),
+//   };
+// };
+
+export default connect(mapStateToProps)(App);
