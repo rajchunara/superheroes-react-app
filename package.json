@@ -19,7 +19,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   },
-  "homepage": "https://rajchunara.github.io/superheros-react-app",
+  "homepage": "https://rajchunara.github.io/superheroes-react-app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
