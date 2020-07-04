@@ -1,0 +1,22 @@
+.powerstats,
+.biography,
+.work,
+.connections {
+  margin: 20px 0px;
+}
+
+.powerstatsTitle,
+.biographyTitle,
+.workTitle,
+.connectionsTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(57, 83, 117);
+}
+
+.property {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+}

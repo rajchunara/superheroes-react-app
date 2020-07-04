@@ -1,5 +1,5 @@
 .superheroContainer {
-  margin-top: 80px;
+  padding-top: 80px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -10,4 +10,10 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   width: 80%;
   grid-gap: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
 }

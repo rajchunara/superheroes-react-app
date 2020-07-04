@@ -2,10 +2,17 @@ import {
   FETCH_SUPERHERO_REQUEST,
   FETCH_SUPERHERO_SUCCESS,
   FETCH_SUPERHERO_FAILURE,
+  SET_EXPECTED_SUPERHEROS,
+  ADD_N_SUPERHEROES,
 } from "./superheroTypes";
+
+//Use it when work on local machine
+// import { fakedata } from "../../Utils/fakedata";
 
 const initialState = {
   loading: false,
+  expectedHeroes: 0,
+  // superHero: [...fakedata],
   superHero: [],
   error: "",
 };
@@ -25,11 +32,26 @@ export const superheroReducer = (state = initialState, action) => {
         error: "",
       };
     }
+
     case FETCH_SUPERHERO_FAILURE:
       return {
         ...state,
         loading: false,
         error: action.payload,
+      };
+
+    case SET_EXPECTED_SUPERHEROS:
+      return {
+        ...state,
+        expectedHeroes: state.expectedHeroes + action.payload,
+      };
+
+    case ADD_N_SUPERHEROES:
+      return {
+        ...state,
+        loading: false,
+        superHero: [...state.superHero, ...action.payload],
+        error: "",
       };
     default:
       return state;

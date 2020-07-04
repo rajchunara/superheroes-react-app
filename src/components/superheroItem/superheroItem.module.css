@@ -1,9 +1,85 @@
 .superheroItem {
   justify-self: center;
+  width: 280px;
   height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
 }
 
-.superheroItem > img {
-  height: 100%;
+.superheroItem:hover {
+  cursor: pointer;
+}
+
+.detailsContainer {
+  position: relative;
   width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: rgba(32, 30, 30, 0.541);
+}
+
+.detailsContainer > h2 {
+  margin: 15px 0px 0px 0px;
+  color: #b6dd5a;
+  font-family: "Audiowide", cursive;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-left: 8px;
+}
+
+.detailsButton {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.line1,
+.line2 {
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgb(251, 254, 255);
+  margin: 2px;
+  transition: width 0.3s;
+}
+
+.line1 {
+  width: 35%;
+}
+
+.detailsButton:hover > .line1 {
+  width: 50%;
+}
+
+.line2 {
+  width: 25%;
+}
+
+.detailsButton:hover > .line2 {
+  width: 35%;
+}
+
+@media only screen and (min-width: 900px) {
+  .superheroItem {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .superheroItem {
+    width: 230px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .superheroItem {
+    width: 100%;
+  }
 }

@@ -2,9 +2,12 @@ import {
   FETCH_SUPERHERO_REQUEST,
   FETCH_SUPERHERO_SUCCESS,
   FETCH_SUPERHERO_FAILURE,
+  SET_EXPECTED_SUPERHEROS,
+  ADD_N_SUPERHEROES,
 } from "./superheroTypes";
 
 import axios from "axios";
+import { API_URL } from "../../config/fetchDataCred";
 
 export const fetchSuperheroRequest = () => {
   return {
@@ -26,15 +29,27 @@ export const fetchSuperheroFailure = (error) => {
   };
 };
 
-export const fetchSuperheroById = (id) => {
-  const PROXY_URL = "https://cors-anywhere.herokuapp.com/";
-  const URL = `https://superheroapi.com/api/2579380368828751/${id}`;
+export const setExpectedSuperheroes = (totalHeroesExpected) => {
+  return {
+    type: SET_EXPECTED_SUPERHEROS,
+    payload: totalHeroesExpected,
+  };
+};
 
-  console.log(id);
+export const addNSuperheroes = (heroesArray) => {
+  return {
+    type: ADD_N_SUPERHEROES,
+    payload: heroesArray,
+  };
+};
+
+export const fetchSuperheroById = (id) => {
+  const URL = `${API_URL}/${id}`;
+
   return (dispatch) => {
     dispatch(fetchSuperheroRequest);
     axios
-      .get(PROXY_URL + URL)
+      .get(URL)
       .then((res) => {
         dispatch(fetchSuperheroSuccess(res.data));
       })
@@ -45,10 +60,29 @@ export const fetchSuperheroById = (id) => {
   };
 };
 
-export const fetchNSuperHeroes = (n) => {
+export const fetchNSuperHeroes = (lastId, numberOfHeros) => {
+  let heroesArray = [];
+
   return (dispatch) => {
-    for (let i = 1; i <= n; i++) {
-      dispatch(fetchSuperheroById(i));
+    dispatch(setExpectedSuperheroes(numberOfHeros));
+    dispatch(fetchSuperheroRequest);
+    for (let i = lastId; i < lastId + numberOfHeros; i++) {
+      let URL = `${API_URL}/${i}`;
+
+      axios
+        .get(URL)
+        .then((res) => {
+          heroesArray.push(res.data);
+
+          //Dispatch action on last iteration
+          if (i === lastId + numberOfHeros - 1) {
+            dispatch(addNSuperheroes(heroesArray));
+          }
+        })
+        .catch((err) => {
+          const errMsg = err.message;
+          dispatch(fetchSuperheroFailure(errMsg));
+        });
     }
   };
 };
