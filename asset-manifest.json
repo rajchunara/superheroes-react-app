@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/superheros-react-app/static/css/main.353ddeea.chunk.css",
+    "main.js": "/superheros-react-app/static/js/main.68ad304d.chunk.js",
+    "main.js.map": "/superheros-react-app/static/js/main.68ad304d.chunk.js.map",
+    "runtime-main.js": "/superheros-react-app/static/js/runtime-main.95f3745b.js",
+    "runtime-main.js.map": "/superheros-react-app/static/js/runtime-main.95f3745b.js.map",
+    "static/css/2.4707e12a.chunk.css": "/superheros-react-app/static/css/2.4707e12a.chunk.css",
+    "static/js/2.b8c6d07b.chunk.js": "/superheros-react-app/static/js/2.b8c6d07b.chunk.js",
+    "static/js/2.b8c6d07b.chunk.js.map": "/superheros-react-app/static/js/2.b8c6d07b.chunk.js.map",
+    "index.html": "/superheros-react-app/index.html",
+    "precache-manifest.0f29c3c6c521e291cc099d59efd6ab99.js": "/superheros-react-app/precache-manifest.0f29c3c6c521e291cc099d59efd6ab99.js",
+    "service-worker.js": "/superheros-react-app/service-worker.js",
+    "static/css/2.4707e12a.chunk.css.map": "/superheros-react-app/static/css/2.4707e12a.chunk.css.map",
+    "static/css/main.353ddeea.chunk.css.map": "/superheros-react-app/static/css/main.353ddeea.chunk.css.map",
+    "static/js/2.b8c6d07b.chunk.js.LICENSE.txt": "/superheros-react-app/static/js/2.b8c6d07b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95f3745b.js",
+    "static/css/2.4707e12a.chunk.css",
+    "static/js/2.b8c6d07b.chunk.js",
+    "static/css/main.353ddeea.chunk.css",
+    "static/js/main.68ad304d.chunk.js"
+  ]
+}
