@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/superheros-react-app/static/css/main.353ddeea.chunk.css",
-    "main.js": "/superheros-react-app/static/js/main.68ad304d.chunk.js",
-    "main.js.map": "/superheros-react-app/static/js/main.68ad304d.chunk.js.map",
-    "runtime-main.js": "/superheros-react-app/static/js/runtime-main.95f3745b.js",
-    "runtime-main.js.map": "/superheros-react-app/static/js/runtime-main.95f3745b.js.map",
-    "static/css/2.4707e12a.chunk.css": "/superheros-react-app/static/css/2.4707e12a.chunk.css",
-    "static/js/2.b8c6d07b.chunk.js": "/superheros-react-app/static/js/2.b8c6d07b.chunk.js",
-    "static/js/2.b8c6d07b.chunk.js.map": "/superheros-react-app/static/js/2.b8c6d07b.chunk.js.map",
-    "index.html": "/superheros-react-app/index.html",
-    "precache-manifest.0f29c3c6c521e291cc099d59efd6ab99.js": "/superheros-react-app/precache-manifest.0f29c3c6c521e291cc099d59efd6ab99.js",
-    "service-worker.js": "/superheros-react-app/service-worker.js",
-    "static/css/2.4707e12a.chunk.css.map": "/superheros-react-app/static/css/2.4707e12a.chunk.css.map",
-    "static/css/main.353ddeea.chunk.css.map": "/superheros-react-app/static/css/main.353ddeea.chunk.css.map",
-    "static/js/2.b8c6d07b.chunk.js.LICENSE.txt": "/superheros-react-app/static/js/2.b8c6d07b.chunk.js.LICENSE.txt"
+    "main.css": "/superheroes-react-app/static/css/main.353ddeea.chunk.css",
+    "main.js": "/superheroes-react-app/static/js/main.2827d7fb.chunk.js",
+    "main.js.map": "/superheroes-react-app/static/js/main.2827d7fb.chunk.js.map",
+    "runtime-main.js": "/superheroes-react-app/static/js/runtime-main.6f3b7ae5.js",
+    "runtime-main.js.map": "/superheroes-react-app/static/js/runtime-main.6f3b7ae5.js.map",
+    "static/css/2.4707e12a.chunk.css": "/superheroes-react-app/static/css/2.4707e12a.chunk.css",
+    "static/js/2.b8c6d07b.chunk.js": "/superheroes-react-app/static/js/2.b8c6d07b.chunk.js",
+    "static/js/2.b8c6d07b.chunk.js.map": "/superheroes-react-app/static/js/2.b8c6d07b.chunk.js.map",
+    "index.html": "/superheroes-react-app/index.html",
+    "precache-manifest.7a417118248de2b6c46d104e8e94dbc1.js": "/superheroes-react-app/precache-manifest.7a417118248de2b6c46d104e8e94dbc1.js",
+    "service-worker.js": "/superheroes-react-app/service-worker.js",
+    "static/css/2.4707e12a.chunk.css.map": "/superheroes-react-app/static/css/2.4707e12a.chunk.css.map",
+    "static/css/main.353ddeea.chunk.css.map": "/superheroes-react-app/static/css/main.353ddeea.chunk.css.map",
+    "static/js/2.b8c6d07b.chunk.js.LICENSE.txt": "/superheroes-react-app/static/js/2.b8c6d07b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.95f3745b.js",
+    "static/js/runtime-main.6f3b7ae5.js",
     "static/css/2.4707e12a.chunk.css",
     "static/js/2.b8c6d07b.chunk.js",
     "static/css/main.353ddeea.chunk.css",
-    "static/js/main.68ad304d.chunk.js"
+    "static/js/main.2827d7fb.chunk.js"
   ]
 }
