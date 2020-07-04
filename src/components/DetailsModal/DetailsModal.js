@@ -16,10 +16,6 @@ import "./detailsModalAnimation.css";
 
 Modal.setAppElement("#root");
 export default function DetailsModal({ isOpen, hero, toggleModal }) {
-  let modalOpenAnimationClass = isOpen ? "modalAnimation" : null;
-
-  console.log(styles[modalOpenAnimationClass]);
-
   return (
     <div className={`${styles.detailsModalContainer}`}>
       <Modal
@@ -41,7 +37,10 @@ export default function DetailsModal({ isOpen, hero, toggleModal }) {
           <div className={styles.wrapper}>
             {/* Image in modal */}
             <div className={styles.imageWrapper}>
-              <ImageComponent imageURL={hero.image.url} />
+              <ImageComponent
+                imageURL={hero.image.url}
+                toggleModal={() => null}
+              />
             </div>
 
             {/* Information in modal */}

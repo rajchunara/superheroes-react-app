@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./imageComponent.module.css";
 
-export default function ImageComponent({ imageURL }) {
+export default function ImageComponent({ imageURL, toggleModal }) {
   return (
     <>
       <div className={styles.imageNotFound}>
@@ -10,6 +10,7 @@ export default function ImageComponent({ imageURL }) {
       <div
         className={styles.imageContainer}
         style={{ background: `url(${imageURL}) no-repeat` }}
+        onClick={() => toggleModal()}
       ></div>
     </>
   );

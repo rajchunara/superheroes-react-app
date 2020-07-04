@@ -19,7 +19,11 @@ export default function SuperheroItem({ superhero }) {
       data-aos="zoom-in"
       data-aos-delay={animationDelay}
     >
-      <ImageComponent imageURL={superhero.image.url} />
+      <ImageComponent
+        imageURL={superhero.image.url}
+        toggleModal={toggleModal}
+      />
+
       <div className={styles.detailsContainer}>
         <h2>{superhero.name}</h2>
 
