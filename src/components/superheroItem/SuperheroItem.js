@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styles from "./superheroItem.module.css";
-import DetailsModal from "../DetailsModal/DetailsModal";
-import ImageComponent from "../ImageComponent/ImageComponent";
+import React, { useState } from 'react';
+import styles from './superheroItem.module.css';
+import DetailsModal from '../DetailsModal/DetailsModal';
+import ImageComponent from '../ImageComponent/ImageComponent';
 
 export default function SuperheroItem({ superhero }) {
   const [isModalOpen, setisModalOpen] = useState(false);

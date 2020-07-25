@@ -1,20 +1,21 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 //Import components
-import Modal from "react-modal";
-import ImageComponent from "../ImageComponent/ImageComponent";
+import Modal from 'react-modal';
+import ImageComponent from '../ImageComponent/ImageComponent';
 import {
   PowerStats,
   Biography,
   Work,
   Connections,
-} from "../HeroDetails/HeroDetails";
+} from '../HeroDetails/HeroDetails';
 
 //css
-import styles from "./detailsModal.module.css";
-import "./detailsModalAnimation.css";
+import styles from './detailsModal.module.css';
+import './detailsModalAnimation.css';
 
-Modal.setAppElement("#root");
+// Modal.setAppElement('#root');
 export default function DetailsModal({ isOpen, hero, toggleModal }) {
   return (
     <div className={`${styles.detailsModalContainer}`}>
@@ -63,3 +64,9 @@ export default function DetailsModal({ isOpen, hero, toggleModal }) {
     </div>
   );
 }
+
+DetailsModal.propTypes = {
+  isOpen: PropTypes.bool,
+  hero: PropTypes.object,
+  toggleModal: PropTypes.func,
+};
