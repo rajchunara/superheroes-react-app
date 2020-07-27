@@ -4,10 +4,11 @@ import {
   FETCH_SUPERHERO_FAILURE,
   SET_EXPECTED_SUPERHEROS,
   ADD_N_SUPERHEROES,
-} from "./superheroTypes";
+  ADD_SINGLE_SUPERHERO,
+} from './superheroTypes';
 
-import axios from "axios";
-import { API_URL } from "../../config/fetchDataCred";
+import axios from 'axios';
+import { API_URL } from '../../config/fetchDataCred';
 
 export const fetchSuperheroRequest = () => {
   return {
@@ -43,6 +44,13 @@ export const addNSuperheroes = (heroesArray) => {
   };
 };
 
+export const addSingleHero = (superhero) => {
+  return {
+    type: ADD_SINGLE_SUPERHERO,
+    payload: superhero,
+  };
+};
+
 export const fetchSuperheroById = (id) => {
   const URL = `${API_URL}/${id}`;
 
@@ -66,6 +74,8 @@ export const fetchNSuperHeroes = (lastId, numberOfHeros) => {
   return (dispatch) => {
     dispatch(setExpectedSuperheroes(numberOfHeros));
     dispatch(fetchSuperheroRequest);
+
+    //dispatch multiple actions for getting data based on id
     for (let i = lastId; i < lastId + numberOfHeros; i++) {
       let URL = `${API_URL}/${i}`;
 
@@ -84,5 +94,25 @@ export const fetchNSuperHeroes = (lastId, numberOfHeros) => {
           dispatch(fetchSuperheroFailure(errMsg));
         });
     }
+  };
+};
+
+export const fetchSuperheroByName = (name) => {
+  let URL = `${API_URL}/search/${name}`;
+  return (dispatch) => {
+    dispatch(fetchSuperheroRequest);
+
+    axios
+      .get(URL)
+      .then((res) => {
+        console.log(res);
+        dispatch(addSingleHero(res.data));
+      })
+      .catch((err) => {
+        const errMsg = err.message;
+        console.log(errMsg);
+
+        dispatch(fetchSuperheroFailure(errMsg));
+      });
   };
 };

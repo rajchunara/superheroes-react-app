@@ -4,7 +4,8 @@ import {
   FETCH_SUPERHERO_FAILURE,
   SET_EXPECTED_SUPERHEROS,
   ADD_N_SUPERHEROES,
-} from "./superheroTypes";
+  ADD_SINGLE_SUPERHERO,
+} from './superheroTypes';
 
 //Use it when work on local machine
 // import { fakedata } from "../../Utils/fakedata";
@@ -14,7 +15,8 @@ const initialState = {
   expectedHeroes: 0,
   // superHero: [...fakedata],
   superHero: [],
-  error: "",
+  superHeroByName: {},
+  error: '',
 };
 
 export const superheroReducer = (state = initialState, action) => {
@@ -29,7 +31,7 @@ export const superheroReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         superHero: [...state.superHero, action.payload],
-        error: "",
+        error: '',
       };
     }
 
@@ -51,7 +53,15 @@ export const superheroReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         superHero: [...state.superHero, ...action.payload],
-        error: "",
+        error: '',
+      };
+
+    case ADD_SINGLE_SUPERHERO:
+      return {
+        ...state,
+        loading: false,
+        superHeroByName: action.payload,
+        error: '',
       };
     default:
       return state;
