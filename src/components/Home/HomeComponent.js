@@ -22,7 +22,7 @@ export default function HomeComponent() {
       <SearchBar toggleHeoresView={toggleHeoresView} />
       {showAllHeores ? <SuperHeroContainer /> : <IndividualHero />}
 
-      {!isDataLoading && <LoadingComponent />}
+      {isDataLoading && <LoadingComponent />}
     </div>
   );
 }

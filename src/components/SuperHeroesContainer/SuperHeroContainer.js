@@ -1,21 +1,22 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from 'react';
 
 // React-redux
-import { useSelector, useDispatch } from "react-redux";
-import { fetchNSuperHeroes } from "../../redux/superheroes/superheroesAction";
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchNSuperHeroes } from '../../redux/superheroes/superheroesAction';
 
 //react components
-import SuperheroItem from "../superheroItem/SuperheroItem";
-import NetworkError from "../ErrorComponents/NetworkError";
-import NotFoundError from "../ErrorComponents/NotFoundError";
+import SuperheroItem from '../superheroItem/SuperheroItem';
+import NetworkError from '../ErrorComponents/NetworkError';
+import NotFoundError from '../ErrorComponents/NotFoundError';
+import GridContainer from '../GridContainer/GridContainer';
 
 //Utils
-import { totalNumberOfHeroes } from "../../Utils/numberOfHeroes";
-import { findTheMaxIdFromSuperheroes } from "../../Utils/utilFunctions";
-import { NETWORK_ERROR, REQUEST_FAILED_ERROR } from "../../Utils/errorTypes";
+import { totalNumberOfHeroes } from '../../Utils/numberOfHeroes';
+import { findTheMaxIdFromSuperheroes } from '../../Utils/utilFunctions';
+import { NETWORK_ERROR, REQUEST_FAILED_ERROR } from '../../Utils/errorTypes';
 
 //css
-import styles from "./superheroContainer.module.css";
+import styles from './superheroContainer.module.css';
 
 function SuperHeroContainer() {
   const superHeroState = useSelector((state) => state.superhero);
@@ -33,7 +34,6 @@ function SuperHeroContainer() {
   //It receives array of element which is seen
   //but here we are watching only one element
   function callAPIWhenBottomofListIsReached(entries) {
-    console.log(loadingData);
     if (entries[0].isIntersecting && !ignoreFirstObserverCall) {
       //Call API Here
       if (!loadingData) {
@@ -86,14 +86,14 @@ function SuperHeroContainer() {
 
     //Return jsx if there is no error
     return (
-      <div className={styles.gridContainer}>
+      <GridContainer>
         {superheroes.map((hero) => {
           return <SuperheroItem superhero={hero} key={hero.id} />;
         })}
 
         {/* bottomRef to check if user has reached bottom of list using intersection observer */}
         <div ref={bottomRef}></div>
-      </div>
+      </GridContainer>
     );
   };
 

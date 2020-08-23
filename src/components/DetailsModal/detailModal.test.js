@@ -12,7 +12,6 @@ export const setup = (props = {}) => {
 describe('DetailsModal Component', () => {
   describe('Check prop-types', () => {
     it('should render with props', () => {
-      ex;
     });
   });
 });

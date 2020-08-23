@@ -26,7 +26,7 @@
 .detailsContainer > h2 {
   margin: 15px 0px 0px 0px;
   color: #b6dd5a;
-  font-family: "Audiowide", cursive;
+  font-family: 'Audiowide', cursive;
   font-size: 15px;
   letter-spacing: 1px;
   margin-left: 8px;
@@ -66,7 +66,7 @@
   width: 35%;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (max-width: 900px) {
   .superheroItem {
     width: 100%;
   }

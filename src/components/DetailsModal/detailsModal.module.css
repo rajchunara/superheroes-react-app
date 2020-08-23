@@ -1,11 +1,13 @@
 .detailsModalContainer {
   position: relative;
+  z-index: 50;
 }
 
 .modal {
   width: 60%;
   height: 70vh;
   background-color: #47444493;
+  z-index: 50;
 }
 
 .modalAnimation {
@@ -77,7 +79,7 @@
 }
 
 .heroName {
-  font-family: "Audiowide", cursive;
+  font-family: 'Audiowide', cursive;
   font-size: 40px;
 }
 
@@ -103,7 +105,7 @@
   height: 500px;
   margin: 0px 0px 0px 0px;
   padding: 20px 0px 20px 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .modalDetails {
@@ -138,6 +140,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 1200px) {
