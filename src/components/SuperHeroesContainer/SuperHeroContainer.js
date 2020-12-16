@@ -92,14 +92,18 @@ function SuperHeroContainer() {
         })}
 
         {/* bottomRef to check if user has reached bottom of list using intersection observer */}
-        <div ref={bottomRef}></div>
+        <div className={styles.bottomRef} ref={bottomRef}></div>
+        <div className={styles.bottomGap}></div>
       </GridContainer>
     );
   };
 
   //Return from this component
   return (
-    <div className={styles.superheroContainer}>{superheroContainer()}</div>
+    <div className={styles.superheroContainer}>
+      {superheroContainer()}
+      <div className={styles.bottomGap}></div>
+    </div>
   );
 }
 

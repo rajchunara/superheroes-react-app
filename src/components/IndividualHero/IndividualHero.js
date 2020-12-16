@@ -25,10 +25,14 @@ export default function IndividualHero() {
 
   const displayResult =
     Object.keys(superHeroByName).length === 0 ? (
-      <div> Search your hero </div>
+      <div> Searching your hero </div>
     ) : (
       afterSearchResults()
     );
 
-  return <div className="individual-container">{displayResult}</div>;
+  return <div>
+    <div className="individual-container">{displayResult}</div>
+    <div className="bottomGap"></div>
+    
+    </div>;
 }
