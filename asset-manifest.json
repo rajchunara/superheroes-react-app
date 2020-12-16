@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/superheroes-react-app/static/css/main.f08881cd.chunk.css",
-    "main.js": "/superheroes-react-app/static/js/main.9279193d.chunk.js",
-    "main.js.map": "/superheroes-react-app/static/js/main.9279193d.chunk.js.map",
+    "main.css": "/superheroes-react-app/static/css/main.68e1c21d.chunk.css",
+    "main.js": "/superheroes-react-app/static/js/main.771816a9.chunk.js",
+    "main.js.map": "/superheroes-react-app/static/js/main.771816a9.chunk.js.map",
     "runtime-main.js": "/superheroes-react-app/static/js/runtime-main.6f3b7ae5.js",
     "runtime-main.js.map": "/superheroes-react-app/static/js/runtime-main.6f3b7ae5.js.map",
     "static/css/2.4707e12a.chunk.css": "/superheroes-react-app/static/css/2.4707e12a.chunk.css",
-    "static/js/2.eedbd1d5.chunk.js": "/superheroes-react-app/static/js/2.eedbd1d5.chunk.js",
-    "static/js/2.eedbd1d5.chunk.js.map": "/superheroes-react-app/static/js/2.eedbd1d5.chunk.js.map",
+    "static/js/2.b34393a4.chunk.js": "/superheroes-react-app/static/js/2.b34393a4.chunk.js",
+    "static/js/2.b34393a4.chunk.js.map": "/superheroes-react-app/static/js/2.b34393a4.chunk.js.map",
     "index.html": "/superheroes-react-app/index.html",
-    "precache-manifest.b20272554055f20d7e75d9b6552675cf.js": "/superheroes-react-app/precache-manifest.b20272554055f20d7e75d9b6552675cf.js",
+    "precache-manifest.851999b4b77900c62e0a2b0fb67b9a37.js": "/superheroes-react-app/precache-manifest.851999b4b77900c62e0a2b0fb67b9a37.js",
     "service-worker.js": "/superheroes-react-app/service-worker.js",
     "static/css/2.4707e12a.chunk.css.map": "/superheroes-react-app/static/css/2.4707e12a.chunk.css.map",
-    "static/css/main.f08881cd.chunk.css.map": "/superheroes-react-app/static/css/main.f08881cd.chunk.css.map",
-    "static/js/2.eedbd1d5.chunk.js.LICENSE.txt": "/superheroes-react-app/static/js/2.eedbd1d5.chunk.js.LICENSE.txt"
+    "static/css/main.68e1c21d.chunk.css.map": "/superheroes-react-app/static/css/main.68e1c21d.chunk.css.map",
+    "static/js/2.b34393a4.chunk.js.LICENSE.txt": "/superheroes-react-app/static/js/2.b34393a4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6f3b7ae5.js",
     "static/css/2.4707e12a.chunk.css",
-    "static/js/2.eedbd1d5.chunk.js",
-    "static/css/main.f08881cd.chunk.css",
-    "static/js/main.9279193d.chunk.js"
+    "static/js/2.b34393a4.chunk.js",
+    "static/css/main.68e1c21d.chunk.css",
+    "static/js/main.771816a9.chunk.js"
   ]
 }
